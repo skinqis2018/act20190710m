@@ -47,6 +47,7 @@
       <span class="prize__task__text">2:观看WCG王者荣耀全球赛3分钟</span>
       <span class="prize__task__score">+50积分</span>
       <ActBtn
+        disabled
         style="display:inline-block; width: 6.8rem"
         text="领取"/>
     </div>
@@ -54,6 +55,7 @@
       <span class="prize__task__text">3.观看王者专区任意主播直播累计观看30分钟</span>
       <span class="prize__task__score">+50积分</span>
       <ActBtn
+        disabled
         style="display:inline-block; width: 6.8rem"
         text="领取"/>
     </div>
@@ -61,6 +63,7 @@
       <span class="prize__task__text">4.为任意王者专区的主播送出至少1个WCG你最强礼物</span>
       <span class="prize__task__score">+50积分</span>
       <ActBtn
+        disabled
         style="display:inline-block; width: 6.8rem"
         text="领取"/>
     </div>

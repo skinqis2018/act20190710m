@@ -36,6 +36,20 @@
           text='前往王者专区'/>
       </div>
       <img style="margin-right: 1rem" src="../imgs/stars_12.jpg"/>
+      <img src="../imgs/stars_01.jpg"/>
+      <div style="margin-top: 1.4rem" class="stars__list__right__text">
+        <div style="margin-bottom: 4.2rem">诗仙小哥哥，王者荣耀人气主播，一手露娜solo秀尽操作，游戏对局中有些自己独特的打法，粉丝戏称为江南偷塔王，在王者峡谷独领风骚。7月18日-21日，跟诗仙一起围观王者WCG决赛吧</div>
+        <ActBtn 
+          class="stars__btn"
+          text='前往王者专区'/>
+      </div>
+      <div style="margin-top: 1.4rem" class="stars__list__left__text">
+        <div style="margin-bottom: 2.3rem">安稳，王者荣耀人气美女主播，不仅颜值爆棚，游戏技术水平更是让人惊叹不已。每个赛季必冲百星，国服最强李白、裴擒虎等，无疑是王者峡谷头号女打野。7月18日-21日，跟安稳小姐姐一起围观王者WCG决赛吧</div>
+        <ActBtn 
+          class="stars__btn"
+          text='前往王者专区'/>
+      </div>
+      <img style="margin-right: 1rem" src="../imgs/stars_02.jpg"/>
     </div>
   </div>
 </template>
