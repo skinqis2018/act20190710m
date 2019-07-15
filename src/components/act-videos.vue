@@ -1,9 +1,9 @@
 <template>
   <div class="videos">
     <header>
-      <img src="../imgs/title_arrow.png"/>
-      <img src="../imgs/videos_title.png"/>
-      <img src="../imgs/title_arrow.png"/>
+      <img src="../imgs/title_arrow.png" />
+      <img src="../imgs/videos_title.png" />
+      <img src="../imgs/title_arrow.png" />
     </header>
     <div class="videos__tabs">
       <div 
@@ -14,14 +14,14 @@
       </div>
       <div 
         class="videos__tabs__tab"
-        :class="{active : !active}"
+        :class="{ active : !active }"
         @click="toList">
         往期精彩
       </div>
     </div>
     <div v-show="active" class="videos__box">
       <div class="videos__box__content">
-        <img :src="video.poster || require('../imgs/default.jpg')"/>
+        <img :src="video.poster || require('../imgs/default.jpg')" />
         <div v-show="block" class="videos__box__content__mask"></div>
         <div v-show="block" class="videos__box__content__note">
           <header>登录企鹅电竞，观看高清直播，</header>
@@ -29,10 +29,10 @@
           <footer>
             <ActBtn 
               text="以后再说"
-              style="width: 10rem"/>
+              style="width: 10rem" />
             <ActBtn 
               text="前往观看"
-              style="width: 10rem"/>
+              style="width: 10rem" />
           </footer>
         </div>
       </div>
@@ -40,32 +40,32 @@
         <div class="videos__box__info__opening">
           <img 
             v-show="lives.length > 0"
-            src="../imgs/date.png"/>
+            src="../imgs/date.png" />
           <span
             v-show="lives.length > 0">
-            {{video.date}}
+            {{ video.date }}
           </span>
           <span
             v-show="lives.length > 0">
-            {{video.time}}
+            {{ video.time }}
           </span>
         </div>
         <div class="videos__box__info__change">
           <img 
-            @click="pre" 
-            src="../imgs/videos_arrow.png"/>
+            src="../imgs/videos_arrow.png" 
+            @click="pre" />
           <div 
-            class="videos__box__info__change__teams"
-            v-show="lives.length > 0">
+            v-show="lives.length > 0"
+            class="videos__box__info__change__teams">
             <div class="videos__box__info__change__teams__item">
-              <div>{{video.leftEN}}</div>
-              <div>From: {{video.leftZH}}</div>
+              <div>{{ video.leftEN }}</div>
+              <div>From: {{ video.leftZH }}</div>
               <em></em>
             </div>
-            <img src="../imgs/vs.png"/>
+            <img src="../imgs/vs.png" />
             <div class="videos__box__info__change__teams__item">
-              <div>{{video.rightEN}}</div>
-              <div>From: {{video.rightZH}}</div>
+              <div>{{ video.rightEN }}</div>
+              <div>From: {{ video.rightZH }}</div>
               <em></em>
             </div>
           </div>
@@ -76,26 +76,28 @@
             <div>带你上分吧</div>
           </div>
           <img 
-            @click="next" 
             class="videos__box__info__change__next" 
-            src="../imgs/videos_arrow.png"/>
+            src="../imgs/videos_arrow.png" 
+            @click="next" />
         </div>
       </div>
     </div>
     <div v-show="!active" class="videos__box">
       <div class="videos__box__content">
-        <img :src="video.poster || require('../imgs/default.jpg')"/>
+        <img :src="video.poster || require('../imgs/default.jpg')" />
         <div v-show="block" class="videos__box__content__mask"></div>
-        <div v-show="block" class="videos__box__content__note">
+        <div 
+          v-show="block" 
+          class="videos__box__content__note">
           <header>登录企鹅电竞，观看高清直播，</header>
           <div>还有海量礼物等你来领</div>
           <footer>
             <ActBtn 
               text="以后再说"
-              style="width: 10rem"/>
+              style="width: 10rem" />
             <ActBtn 
               text="前往观看"
-              style="width: 10rem"/>
+              style="width: 10rem" />
           </footer>
         </div>
       </div>
@@ -103,32 +105,32 @@
         <div class="videos__box__info__opening">
           <img 
             v-show="list.length > 0"
-            src="../imgs/date.png"/>
+            src="../imgs/date.png" />
           <span
             v-show="list.length > 0">
-            {{video.date}}
+            {{ video.date }}
           </span>
           <span
             v-show="list.length > 0">
-            {{video.time}}
+            {{ video.time }}
           </span>
         </div>
         <div class="videos__box__info__change">
           <img 
-            @click="listPre" 
-            src="../imgs/videos_arrow.png"/>
+            src="../imgs/videos_arrow.png"
+            @click="listPre" />
           <div 
-            class="videos__box__info__change__teams"
-            v-show="list.length > 0">
+            v-show="list.length > 0"
+            class="videos__box__info__change__teams">
             <div class="videos__box__info__change__teams__item">
-              <div>{{video.leftEN}}</div>
-              <div>From: {{video.leftZH}}</div>
+              <div>{{ video.leftEN }}</div>
+              <div>From: {{ video.leftZH }}</div>
               <em></em>
             </div>
-            <img src="../imgs/vs.png"/>
+            <img src="../imgs/vs.png" />
             <div class="videos__box__info__change__teams__item">
               <div>{{video.rightEN}}</div>
-              <div>From: {{video.rightZH}}</div>
+              <div>From: {{ video.rightZH }}</div>
               <em></em>
             </div>
           </div>
@@ -139,9 +141,9 @@
             <div>带你上分吧</div>
           </div>
           <img 
-            @click="listNext" 
+            src="../imgs/videos_arrow.png"
             class="videos__box__info__change__next" 
-            src="../imgs/videos_arrow.png"/>
+            @click="listNext" />
         </div>
       </div>
     </div>
@@ -149,8 +151,12 @@
       <ActBtn 
         class="videos__btn"
         text="前往围观"
-        style="width: 10rem"/>
-      <div v-show="active ? lives.length > 0 : list.length > 0" class="videos__link">提醒我</div>
+        style="width: 10rem" />
+      <div 
+        v-show="active ? lives.length > 0 : list.length > 0" 
+        class="videos__link">
+        提醒我
+      </div>
     </footer>
   </div>
 </template>
@@ -177,7 +183,7 @@ export default {
           leftZH: '德国',
           rightEN: 'AG.Y',
           rightZH: '中国'
-        },{
+        }, {
           poster: require('../imgs/default.jpg'),
           date: '7月19日',
           time: '19:00',
@@ -185,7 +191,7 @@ export default {
           leftZH: '美国',
           rightEN: 'JP',
           rightZH: '日本'
-        },{
+        }, {
           poster: require('../imgs/video.jpg'),
           date: '7月22日',
           time: '22:00',
@@ -204,7 +210,7 @@ export default {
           leftZH: '德国',
           rightEN: 'AG.Y',
           rightZH: '中国'
-        },{
+        }, {
           poster: require('../imgs/video.jpg'),
           date: '9月99日',
           time: '99:00',
@@ -212,7 +218,7 @@ export default {
           leftZH: '巴西',
           rightEN: 'kr',
           rightZH: '韩国'
-        },{
+        }, {
           poster: require('../imgs/default.jpg'),
           date: '9月22日',
           time: '29:00',
@@ -227,7 +233,7 @@ export default {
   mounted () {
     this.$nextTick(function () {
       if (this.lives.length > 0) {
-        this.video = Object.assign({},this.lives[0])
+        this.video = this.lives[0]
         this.index = 0
       }
     })

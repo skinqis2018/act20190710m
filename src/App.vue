@@ -58,7 +58,7 @@
       }
     },
     created () {
-      eventBus.$on('openMask', () => {
+      window.eventBus.$on('openMask', () => {
         if (!this.isApp) {
           this.openMask = true
         }
